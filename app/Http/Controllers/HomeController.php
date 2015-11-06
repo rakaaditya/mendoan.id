@@ -46,13 +46,11 @@ class HomeController extends Controller
             $data = Votes::firstOrCreate([
                 'ip_address'  => $request->getClientIp()
             ]);
-            $data->save();
-            
-            
-            $count = (int)$count+1;
-            $this->redis->set(COUNTER_KEY, $count);
+            if($data->save()) {
+                $count = (int)$count+1;
+                $this->redis->set(COUNTER_KEY, $count);
+            }
             $total = str_pad($count, 6, 0, STR_PAD_LEFT);
-            
             echo $total;
         }
     }
