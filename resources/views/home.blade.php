@@ -28,6 +28,7 @@
                 <div class="col-md-12 col-xs-12">
                     <p style="font-size:18px;">Mendoan milik kita semua. Bukan milik perseorangan. Luangkan waktumu untuk bergabung mendukung petisi ini dengan cara klik tombol di bawah.</p>
                 </div>
+                @if(! $exist)
                 <div class="col-md-12 col-xs-12 count-box">
                     <span class="counter" id="counter">{{$total}}</span><br/>
                     <span class="counter-text" id="counter-text">Orang telah mendukung</span>
@@ -56,6 +57,30 @@
                         <div class="clearfix"></div>
                     </div>
                 </div>
+                @else
+                <div class="col-md-12 col-xs-12 count-box">
+                    <span class="counter" id="counter">{{$total}}</span><br/>
+                    <span class="counter-text" id="counter-text">Orang telah mendukung termasuk kamu</span>
+                </div>
+                <div class="col-md-12 col-xs-12 share-box">
+                    <hr/>
+                    <p>Terima kasih telah meluangkan waktunya untuk mendukung. Sebarkan agar teman-teman kamu ikut mendukung:</p>
+                    <div class="sharepost">
+                        <ul>
+                            <li class="facebook">
+                                <div class="icon"><a href="http://www.facebook.com/sharer/sharer.php?u={{url()}}" id="fbShare"><i class="fa fa-facebook"></i></a></div>
+                            </li>
+                            <li class="twitter">
+                                <div class="icon"><a href="https://twitter.com/share?text={{urlencode('Saya mendukung Mendoan milik kita semua #SaveMendoan')}} &url={{urlencode(url())}}" id="twShare"><i class="fa fa-twitter"></i></a></div>
+                            </li>
+                            <li class="whatsapp">
+                                <div class="icon"><a href="whatsapp://send?text={{urlencode('Saya mendukung Mendoan milik kita semua. Ikut dukung di '.url().' #SaveMendoan')}}"><i class="fa fa-whatsapp"></i></a></div>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                @endif
             </div>
         </div>
     </div>
