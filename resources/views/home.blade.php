@@ -48,10 +48,10 @@
                                 <div class="icon"><a href="http://www.facebook.com/sharer/sharer.php?u={{url()}}" id="fbShare"><i class="fa fa-facebook"></i></a></div>
                             </li>
                             <li class="twitter">
-                                <div class="icon"><a href="https://twitter.com/share?text={{urlencode('Saya mendukung Mendoan milik kita semua #SaveMendoan')}} &url={{urlencode(url())}}" id="twShare"><i class="fa fa-twitter"></i></a></div>
+                                <div class="icon"><a href="https://twitter.com/share?text={{urlencode('Mendoan milik kita semua. Bukan milik perseorangan. Gabung dukung petisi ini!  #SaveMendoan')}} &url={{urlencode(url())}}" id="twShare"><i class="fa fa-twitter"></i></a></div>
                             </li>
                             <li class="whatsapp">
-                                <div class="icon"><a href="whatsapp://send?text={{urlencode('Saya mendukung Mendoan milik kita semua. Ikut dukung di '.url().' #SaveMendoan')}}"><i class="fa fa-whatsapp"></i></a></div>
+                                <div class="icon"><a href="whatsapp://send?text={{urlencode('Mendoan milik kita semua. Bukan milik perseorangan. Gabung dukung petisi ini! '.url().' #SaveMendoan')}}"><i class="fa fa-whatsapp"></i></a></div>
                             </li>
                         </ul>
                         <div class="clearfix"></div>
