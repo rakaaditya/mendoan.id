@@ -8,15 +8,15 @@
         <meta name="author" content="">
         <!-- S:OG -->
         <meta content="article" property="og:type" />
-        <meta content="#MendoanInyong" property="og:site_name" />
-        <meta content="#MendoanInyong" property="og:title" />
+        <meta content="#SaveMendoan" property="og:site_name" />
+        <meta content="#SaveMendoan" property="og:title" />
         <meta content="{{url()}}" property="og:url" />
         <meta content="1581350762134293" property="fb:app_id" />
         <meta property="og:image" content="{{url('assets/img/mendoan.jpg')}}"/>
         <meta content="Mendoan milik kita semua. Bukan milik perseorangan. Luangkan waktumu untuk bergabung mendukung petisi ini." property="og:description" />
         <!-- E:OG -->
 
-        <title>#MendoanInyong</title>
+        <title>#SaveMendoan</title>
 
         <!-- Bootstrap core CSS -->
         <link href="//cdn-ck.gedrix.net/assets/css/bootstrap.min.css" rel="stylesheet">
