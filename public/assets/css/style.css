@@ -1,0 +1,90 @@
+@font-face{font-family:quicksand;src:url(http://assets.gedrix.net/fonts/Quicksand/Quicksand-Light.otf)}
+.clearfix {
+    clear: both;
+}
+body {
+    font-family: 'Helvetica Neue',Arial,sans-serif;
+    background: #ebebeb;
+}
+.container-box {
+    background: #fff;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.container-box .title-box {
+    margin-top: 30px;
+    text-align: center;
+}
+.container-box .title {
+    background: #E18746;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Arial;
+}
+.content {
+    margin-top: 50px;
+}
+.container-box p {
+    color: #565757;
+}
+.count-box {
+    text-align: center;
+}
+.counter {
+    font-size: 36px;
+    color: #183E6C;
+}
+.counter-text {
+    font-weight: bold;
+    font-size: 18px;
+}
+.support-box {
+    margin-top: 20px;
+    text-align: center;
+}
+.sharepost {
+    color: #fff;
+    margin-top: 10px;
+    float: right;
+}
+.sharepost ul {
+    padding: 0px;
+    margin: 0px;
+}
+.sharepost ul li {
+    display: block;
+    float: left;
+    margin-right: 2px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+}
+.sharepost ul li:hover {
+    opacity: 0.8;
+}
+.sharepost ul li a {
+    color: #fff;
+    display: block;
+}
+.sharepost .icon {
+    font-size: 22px;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    padding-top: 2px;
+}
+.facebook {
+    background-color: #3c599f
+}
+.twitter {
+    background-color: #4099ff
+}
+.whatsapp {
+    background-color: #2e8a06
+}
+.share-box {
+    text-align: center;
+}
