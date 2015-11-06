@@ -24,7 +24,7 @@ class HomeController extends Controller
             $this->redis->set(COUNTER_KEY, $count);
         }
 
-        $total = str_pad(Votes::count(), 6, 0, STR_PAD_LEFT);
+        $total = str_pad($count, 6, 0, STR_PAD_LEFT);
         $exist = Votes::where('ip_address', $request->getClientIp())->count();
         
         return view('home', ['total' => $total, 'exist' => $exist]);
@@ -42,7 +42,7 @@ class HomeController extends Controller
         } else {
             if(! $count = $this->redis->get(COUNTER_KEY))
                 $count = Votes::count();
-            
+
             $data = Votes::firstOrCreate([
                 'ip_address'  => $request->getClientIp()
             ]);
