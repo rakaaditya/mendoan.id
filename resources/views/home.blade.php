@@ -5,7 +5,7 @@
         <div class="col-md-5 col-md-offset-3 container-box">
             <div class="row">
                 <div class="col-md-12 title-box">
-                    <span class="title">#SaveMendoan</span>
+                    <img src="{{url('assets/img/logo.png')}}" width="100%">
                 </div>
             </div>
             <div class="row content">
@@ -15,11 +15,13 @@
                     </div>
                     <div class="col-md-6 col-xs-6">
                         <img src="{{url('assets/img/mendoan.jpg')}}" width="100%">
+                        <span class="caption">Sumber: resepkecilku.com</span>
                     </div>
                 </div>
                 <div class="col-md-12 col-xs-12">
                     <div class="col-md-6 col-xs-6">
                         <img src="{{url('assets/img/fudji.jpg')}}" width="100%">
+                        <span class="caption">Sumber: detik.com</span>
                     </div>
                     <div class="col-md-6 col-xs-6">
                         <p style="text-align:right;"><b>Ada Apa?</b><br/>Fudji Wong mengantongi merek 'mendoan' dengan nomor IDM000237714 yang terdaftar pada 23 Februari 2010 dan berlaku hingga 15 Mei 2018 atas nama Fudji Wong.</p>

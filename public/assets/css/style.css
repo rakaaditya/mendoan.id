@@ -88,3 +88,7 @@ body {
 .share-box {
     text-align: center;
 }
+.caption {
+    color: #565757;
+    font-size: 12px;
+}
