@@ -28,11 +28,11 @@
                     </div>
                 </div>
                 <div class="col-md-12 col-xs-12">
-                    <p style="font-size:18px;">Mendoan milik kita semua. Bukan milik perseorangan. Luangkan waktumu untuk bergabung mendukung petisi ini dengan cara klik tombol di bawah.</p>
+                    <p style="font-size:18px;">Mendoan milik kita semua. Bukan milik perseorangan. Luangkan waktumu untuk bergabung dengan {{$count}} orang lainnya mendukung petisi ini dengan cara klik tombol di bawah.</p>
                 </div>
                 @if(! $exist)
                 <div class="col-md-12 col-xs-12 count-box">
-                    <span class="counter" id="counter">{{$total}}</span><br/><br/>
+                    <span class="counter" id="counter">{{$total}}</span><br/>
                     <span class="counter-text" id="counter-text">Orang telah mendukung</span>
                 </div>
                 <div class="col-md-12 col-xs-12 support-box">
@@ -61,7 +61,7 @@
                 </div>
                 @else
                 <div class="col-md-12 col-xs-12 count-box">
-                    <span class="counter" id="counter">{{$total}}</span><br/><br/>
+                    <span class="counter" id="counter">{{$total}}</span><br/>
                     <span class="counter-text" id="counter-text">Orang telah mendukung termasuk kamu</span>
                 </div>
                 <div class="col-md-12 col-xs-12 share-box">

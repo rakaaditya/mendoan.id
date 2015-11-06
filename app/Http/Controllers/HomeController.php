@@ -27,7 +27,7 @@ class HomeController extends Controller
         $total = str_pad($count, 6, 0, STR_PAD_LEFT);
         $exist = Votes::where('ip_address', $request->getClientIp())->count();
         
-        return view('home', ['total' => $total, 'exist' => $exist]);
+        return view('home', ['total' => $total, 'count' => $count, 'exist' => $exist]);
     }
 
     public function store(Request $request)

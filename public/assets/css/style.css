@@ -33,19 +33,16 @@ body {
 }
 .count-box {
     text-align: center;
-    margin-top: 10px;
+    background: #183E6C;
 }
 .counter {
     font-size: 36px;
-    background: #183E6C;
     color: #fff;
-    padding: 10px 15px;
-    margin-bottom: 10px;
-     letter-spacing: 5px;
 }
 .counter-text {
     font-weight: bold;
     font-size: 18px;
+    color: #fff;
 }
 .support-box {
     margin-top: 20px;
