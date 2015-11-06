@@ -32,7 +32,7 @@
                 </div>
                 @if(! $exist)
                 <div class="col-md-12 col-xs-12 count-box">
-                    <span class="counter" id="counter">{{$total}}</span><br/>
+                    <span class="counter" id="counter">{{$total}}</span><br/><br/>
                     <span class="counter-text" id="counter-text">Orang telah mendukung</span>
                 </div>
                 <div class="col-md-12 col-xs-12 support-box">
@@ -61,7 +61,7 @@
                 </div>
                 @else
                 <div class="col-md-12 col-xs-12 count-box">
-                    <span class="counter" id="counter">{{$total}}</span><br/>
+                    <span class="counter" id="counter">{{$total}}</span><br/><br/>
                     <span class="counter-text" id="counter-text">Orang telah mendukung termasuk kamu</span>
                 </div>
                 <div class="col-md-12 col-xs-12 share-box">
