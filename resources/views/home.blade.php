@@ -1,6 +1,39 @@
 @extends('layout')
 
 @section('content')
+    <!-- Modal -->
+    <div class="modal fade" id="comment-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" id="modal-close" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Komentar</h4>
+                </div>
+                <form method="post" id="comment" action="{{url('comment')}}">
+                    <div class="modal-body" id="comment-body">
+                        <div class="alert alert-danger" style="display: none;" id="error-box">
+                            <button type="button" class="close">&times;</button>
+                            <div id="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Nama Lengkap" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="comment" placeholder="Apa pendapatmu tentang privatisasi 'Mendoan' oleh Fudji Wong?" class="form-control" rows="3"></textarea>
+                        </div>
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                        <button type="submit" class="btn btn-primary" id="send-button">Kirim</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
     <div class="row">
         <div class="col-md-5 col-md-offset-3 container-box">
             <div class="row">
@@ -40,7 +73,11 @@
                     <form method="post" id="support">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <button type="submit" class="btn btn-primary" id="support-button">DUKUNG SEKARANG!</button>
-                    </post>
+                    </form>
+                    Atau
+                </div>
+                <div class="col-md-12 col-xs-12" align="center">
+                    <button type="submit" class="btn btn-default" id="comment-button" data-toggle="modal" data-target="#comment-modal">Berikan Komentar</button>
                 </div>
                 <div class="col-md-12 col-xs-12 share-box" style="display: none;">
                     <hr/>
@@ -65,6 +102,9 @@
                     <span class="counter-text-info">Sejak Jumat (6/11) pukul 18:00 WIB hingga sekarang,</span><br/>
                     <span class="counter" id="counter">{{$total}}</span><br/>
                     <span class="counter-text" id="counter-text">Orang telah mendukung termasuk kamu</span>
+                </div>
+                <div class="col-md-12 col-xs-12" align="center">
+                    <button type="submit" class="btn btn-default" id="comment-button" data-toggle="modal" data-target="#comment-modal">Berikan Komentar</button>
                 </div>
                 <div class="col-md-12 col-xs-12 share-box">
                     <hr/>
@@ -93,7 +133,6 @@
 @section('js')
 <script>
 $(document).ready(function() {
-    var current = {{$total}};
     $('#support').submit(function(event) {
         $('#support-button').attr('disabled','disabled').html('Mohon Tunggu...');
         $.ajax({
@@ -109,6 +148,38 @@ $(document).ready(function() {
             }
         });
         event.preventDefault();
+    });
+
+    // For commentar form
+    $('#comment').submit(function(event) {
+        $('#send-button').attr('disabled','disabled').html('Mohon Tunggu...');
+        $.ajax({
+            type: "POST",
+            url: "{{url('comment')}}",
+            data: $('#comment').serialize(),
+            success: function(data)
+            {
+                var error = '';
+                if(data.status == 'error') {
+                    $('#send-button').removeAttr('disabled').html('Kirim');
+                    $('#error-box').show();
+                    for (val of data.error) {
+                        error += val+'<br/>';
+                    }
+                    console.log(error);
+                    $('#error-message').empty().html(error);
+                    console.log(data.error);
+                } else {
+                    $('#send-button').hide();
+                    $('#comment-body').empty().html('Komentar kamu berhasil terkirim. Terima kasih atas kontribusinya.');
+                }
+            }
+        });
+        event.preventDefault();
+    });
+    
+    $('#modal-close').click(function() {
+        $('#status_info').hide();
     });
 });
 </script>

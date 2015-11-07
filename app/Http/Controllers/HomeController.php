@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Votes;
+use App\Comments;
 use DB;
 use Redis;
 const COUNTER_KEY = 'MENDOAN:COUNT';
@@ -66,5 +67,35 @@ class HomeController extends Controller
             $total = str_pad($count, 6, 0, STR_PAD_LEFT);
             echo $total;
         }
+    }
+
+    public function comment(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'name'      => 'required|max:225',
+            'email'     => 'email|required|max:255|unique:comments',
+            'comment'   => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            $status = [
+                'status'    => 'error',
+                'error'     => $validator->errors()->all(),
+            ];
+        } else {
+            $data = Comments::firstOrCreate([
+                'name'          => $request->input('name'),
+                'email'         => $request->input('email'),
+                'comment'       => $request->input('comment'),
+                'ip_address'    => $request->getClientIp()
+            ]);
+            $data->save();
+            $status = [
+                'status'    => 'success'
+            ];
+        }
+
+        return response()->json($status)
+                 ->setCallback($request->input('callback'));
     }
 }
