@@ -43,7 +43,6 @@
         <div class="container">
             @yield('content')
         </div>
-        <div id="triggerLoadMore"></div>
         <script src="//cdn-ck.gedrix.net/assets/js/jquery.js"></script>
         <script src="//cdn-ck.gedrix.net/assets/js/bootstrap.min.js"></script>
         <!-- Handlebars -->

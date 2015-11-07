@@ -149,6 +149,7 @@
                     </div>
                 </div>
             </div>
+            <div id="triggerLoadMore"></div>
         </div>
     </div>
 @endsection
