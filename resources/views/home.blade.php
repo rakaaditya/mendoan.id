@@ -129,7 +129,7 @@
                 </div>
                 @endif
             </div>
-            <div class="row" style="display: none;">
+            <div class="row">
                 <div class="col-md-12 col-xs-12 comment-box-content">
                     <h4>Pendapat Masyarakat Tentang Privatisasi "Mendoan"</h4>
 
