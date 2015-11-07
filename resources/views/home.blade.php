@@ -166,9 +166,7 @@ $(document).ready(function() {
                     for (val of data.error) {
                         error += val+'<br/>';
                     }
-                    console.log(error);
                     $('#error-message').empty().html(error);
-                    console.log(data.error);
                 } else {
                     $('#send-button').hide();
                     $('#comment-body').empty().html('Komentar kamu berhasil terkirim. Terima kasih atas kontribusinya.');
