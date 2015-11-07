@@ -9,7 +9,7 @@
                 </div>
             </div>
             <div class="row content">
-                <div class="col-md-12 col-xs-12">
+                <div class="col-md-12 col-xs-12 index-1">
                     <div class="col-md-6 col-xs-6">
                         <p><b>Apa Itu Mendoan?</b><br/>Kata mendoan dianggap berasal dari bahasa Banyumasan, mendo yang berarti setengah matang atau lembek. Mendoan berarti memasak dengan minyak panas yang banyak dengan cepat sehingga masakan tidak matang benar. (Wikipedia)</p>
                     </div>
@@ -18,7 +18,7 @@
                         <span class="caption">Sumber: resepkecilku.com</span>
                     </div>
                 </div>
-                <div class="col-md-12 col-xs-12">
+                <div class="col-md-12 col-xs-12 index-2">
                     <div class="col-md-6 col-xs-6">
                         <img src="{{url('assets/img/fudji.jpg')}}" width="100%">
                         <span class="caption">Sumber: detik.com</span>
@@ -27,7 +27,7 @@
                         <p style="text-align:right;"><b>Ada Apa?</b><br/>Fudji Wong mengantongi merek 'mendoan' dengan nomor IDM000237714 yang terdaftar pada 23 Februari 2010 dan berlaku hingga 15 Mei 2018 atas nama Fudji Wong.</p>
                     </div>
                 </div>
-                <div class="col-md-12 col-xs-12">
+                <div class="col-md-12 col-xs-12 desc">
                     <p style="font-size:18px;">Mendoan milik kita semua. Bukan milik perseorangan. Luangkan waktumu untuk bergabung dengan {{$count}} orang lainnya mendukung petisi ini dengan cara klik tombol di bawah.</p>
                 </div>
                 @if(! $exist)
@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-md-12 col-xs-12 share-box" style="display: none;">
                     <hr/>
-                    <p>Terima kasih telah meluangkan waktunya untuk mendukung. Sebarkan agar teman-teman kamu ikut mendukung:</p>
+                    <p class="thanks">Terima kasih telah meluangkan waktunya.<br/>Sebarkan agar teman-teman kamu ikut mendukung:</p>
                     <div class="sharepost">
                         <ul>
                             <li class="facebook">
@@ -66,7 +66,7 @@
                 </div>
                 <div class="col-md-12 col-xs-12 share-box">
                     <hr/>
-                    <p>Terima kasih telah meluangkan waktunya untuk mendukung. Sebarkan agar teman-teman kamu ikut mendukung:</p>
+                    <p class="thanks">Terima kasih telah meluangkan waktunya.<br/>Sebarkan agar teman-teman kamu ikut mendukung:</p>
                     <div class="sharepost">
                         <ul>
                             <li class="facebook">

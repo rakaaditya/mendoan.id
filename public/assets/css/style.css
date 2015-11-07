@@ -30,7 +30,23 @@ body {
 }
 .container-box p {
     color: #565757;
+    font-size: 11px;
 }
+
+.index-1 {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: dashed 1px #ebebeb;
+    border-top: dashed 1px #ebebeb;
+}
+
+.index-2 {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: dashed 1px #ebebeb;
+}
+
 .count-box {
     text-align: center;
     background: #183E6C;
@@ -93,4 +109,11 @@ body {
 .caption {
     color: #565757;
     font-size: 12px;
+}
+.desc {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.thanks {
+    font-size: 18px !important;
 }
