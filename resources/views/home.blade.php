@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 <div class="col-md-12 col-xs-12 desc">
-                    <p style="font-size:18px;">Mendoan milik kita semua. Bukan milik perseorangan. Luangkan waktumu untuk bergabung dengan {{$count}} orang lainnya mendukung petisi ini dengan cara klik tombol di bawah.</p>
+                    <p style="font-size:18px;">Mendoan milik kita semua. Bukan milik perseorangan. Sudah seharusnya Kemenkum HAM mengkaji ulang pemberian sertifikat merek "Mendoan" untuk Fudji Wong. Luangkan waktumu untuk bergabung dengan {{$count}} orang lainnya mendukung petisi ini dengan cara klik tombol di bawah.</p>
                 </div>
                 @if(! $exist)
                 <div class="col-md-12 col-xs-12 count-box">
