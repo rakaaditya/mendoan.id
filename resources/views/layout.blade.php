@@ -45,6 +45,8 @@
         </div>
         <script src="//cdn-ck.gedrix.net/assets/js/jquery.js"></script>
         <script src="//cdn-ck.gedrix.net/assets/js/bootstrap.min.js"></script>
+        <!-- Handlebars -->
+        <script type="text/javascript" src="//cdn-ck.suarapurwokerto.com/js/handlebars-v4.0.2.js"></script>
         @yield('js')
         <script type= 'text/javascript'>
             $('#twShare,#fbShare').click(function(event) {

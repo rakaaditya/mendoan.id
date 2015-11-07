@@ -35,7 +35,7 @@ class HomeController extends Controller
 
         $total          = str_pad($count, 6, 0, STR_PAD_LEFT);
         $exist          = Votes::where('ip_address', $request->getClientIp())->count();
-        $comments       = Comments::orderBy('id', 'desc')->limit(5)->get();
+        $comments       = Comments::orderBy('id', 'desc')->limit(1)->get();
         $commentCount   = Comments::count();
 
         return view('home', [
@@ -71,37 +71,5 @@ class HomeController extends Controller
             $total = str_pad($count, 6, 0, STR_PAD_LEFT);
             echo $total;
         }
-    }
-
-    public function comment(Request $request)
-    {
-        $validator = Validator::make($request->all(), [
-            'name'      => 'required|max:225',
-            'city'      => 'required|max:225',
-            'email'     => 'email|required|max:255|unique:comments',
-            'comment'   => 'required'
-        ]);
-
-        if ($validator->fails()) {
-            $status = [
-                'status'    => 'error',
-                'error'     => $validator->errors()->all(),
-            ];
-        } else {
-            $data = Comments::firstOrCreate([
-                'name'          => $request->input('name'),
-                'city'          => $request->input('city'),
-                'email'         => $request->input('email'),
-                'comment'       => $request->input('comment'),
-                'ip_address'    => $request->getClientIp()
-            ]);
-            $data->save();
-            $status = [
-                'status'    => 'success'
-            ];
-        }
-
-        return response()->json($status)
-                 ->setCallback($request->input('callback'));
     }
 }

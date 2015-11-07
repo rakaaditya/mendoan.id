@@ -13,4 +13,5 @@
 
 $app->get('/', 'HomeController@index');
 $app->post('/', 'HomeController@store');
-$app->post('comment', 'HomeController@comment');
+$app->get('comment', 'CommentController@index');
+$app->post('comment', 'CommentController@store');

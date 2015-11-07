@@ -1,6 +1,11 @@
 @extends('layout')
 
 @section('content')
+    <script id="comment-child-template" type="text/x-handlebars-template">
+        <div class="comment-child">
+            <b>@{{name}} (@{{city}}):</b><br/> @{{comment}}
+        </div>
+    </script>
     <!-- Modal -->
     <div class="modal fade" id="comment-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
@@ -132,15 +137,19 @@
             <div class="row">
                 <div class="col-md-12 col-xs-12 comment-box-content">
                     <h4>Pendapat Masyarakat Tentang Privatisasi "Mendoan"</h4>
-
-                    @foreach($comments as $row)
-                        <div class="comment-child">
-                            <b>{{$row->name}} ({{$row->city}}):</b><br/> {{$row->comment}}
-                        </div>
-                    @endforeach
-                    Dan {{$commentCount - 5}} lainnya.
+                    <div  class="comment-child-box">
+                        @foreach($comments as $row)
+                            <div class="comment-child">
+                                <b>{{$row->name}} ({{$row->city}}):</b><br/> {{$row->comment}}
+                            </div>
+                        @endforeach
+                    </div>
+                    <div id="loadMoreText" style="text-align:center; display: none;">
+                        <span class="bg-primary" style="padding:10px;">Memuat Komentar Sebelumnya...</span>
+                    </div>
                 </div>
             </div>
+            <div id="triggerLoadMore"></div>
         </div>
     </div>
 @endsection
@@ -194,6 +203,39 @@ $(document).ready(function() {
     $('#modal-close').click(function() {
         $('#status_info').hide();
     });
+
+
+    // Load more comments
+    var counter = 2;
+    $(function() {
+        $(window).scroll(function(){
+            var distanceTop = $('#triggerLoadMore').offset().top - $(window).height();
+
+            if ($(window).scrollTop() > distanceTop) {
+                console.log('Load More!');
+                $('#loadMoreText').show();
+                url = "{{url('comment?page=')}}"+counter;
+                var source = $("#comment-child-template").html();
+                var template = Handlebars.compile(source);
+                var rsPlaceHolder = $('.comment-child-box');
+                
+                $.getJSON( url, function( data ) {
+                    var comments = [];
+                    $.each( data, function( key, val ) {
+                        comment = template(val);
+                        comments.push(comment);
+                    });
+                    
+                    $( "<div/>", {
+                        html: comments.join( "" )
+                    }).appendTo(".comment-child-box");
+                    $('#loadMoreText').hide();
+                });
+                counter++;
+            }
+        });
+    });
 });
 </script>
+
 @endsection
