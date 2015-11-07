@@ -35,7 +35,7 @@ class HomeController extends Controller
 
         $total          = str_pad($count, 6, 0, STR_PAD_LEFT);
         $exist          = Votes::where('ip_address', $request->getClientIp())->count();
-        $comments       = Comments::limit(5)->get();
+        $comments       = Comments::orderBy('id', 'desc')->limit(5)->get();
         $commentCount   = Comments::count();
 
         return view('home', [
