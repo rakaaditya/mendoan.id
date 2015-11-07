@@ -32,6 +32,7 @@
                 </div>
                 @if(! $exist)
                 <div class="col-md-12 col-xs-12 count-box">
+                    <span class="counter-text-info">Sejak Jumat (6/11) pukul 18:00 WIB hingga sekarang,</span><br/>
                     <span class="counter" id="counter">{{$total}}</span><br/>
                     <span class="counter-text" id="counter-text">Orang telah mendukung</span>
                 </div>
@@ -61,6 +62,7 @@
                 </div>
                 @else
                 <div class="col-md-12 col-xs-12 count-box">
+                    <span class="counter-text-info">Sejak Jumat (6/11) pukul 18:00 WIB hingga sekarang,</span><br/>
                     <span class="counter" id="counter">{{$total}}</span><br/>
                     <span class="counter-text" id="counter-text">Orang telah mendukung termasuk kamu</span>
                 </div>

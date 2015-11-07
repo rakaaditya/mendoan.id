@@ -60,6 +60,10 @@ body {
     font-size: 18px;
     color: #fff;
 }
+.counter-text-info {
+    font-size: 14px;
+    color: #fff;
+}
 .support-box {
     margin-top: 20px;
     text-align: center;
