@@ -19,6 +19,9 @@
                             <input type="text" name="name" placeholder="Nama Lengkap" class="form-control">
                         </div>
                         <div class="form-group">
+                            <input type="text" name="city" placeholder="Kota" class="form-control">
+                        </div>
+                        <div class="form-group">
                             <input type="email" name="email" placeholder="Email" class="form-control">
                         </div>
                         <div class="form-group">
@@ -125,6 +128,18 @@
                     </div>
                 </div>
                 @endif
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-xs-12 comment-box-content">
+                    <h4>Pendapat Masyarakat Tentang Privatisasi "Mendoan"</h4>
+
+                    @foreach($comments as $row)
+                        <div class="comment-child">
+                            <b>{{$row->name}} ({{$row->city}}):</b><br/> {{$row->comment}}
+                        </div>
+                    @endforeach
+                    Dan {{$commentCount - 5}} lainnya.
+                </div>
             </div>
         </div>
     </div>

@@ -33,14 +33,18 @@ class HomeController extends Controller
             $kFormat = $count;
         }
 
-        $total = str_pad($count, 6, 0, STR_PAD_LEFT);
-        $exist = Votes::where('ip_address', $request->getClientIp())->count();
-        
+        $total          = str_pad($count, 6, 0, STR_PAD_LEFT);
+        $exist          = Votes::where('ip_address', $request->getClientIp())->count();
+        $comments       = Comments::limit(5)->get();
+        $commentCount   = Comments::count();
+
         return view('home', [
-            'total'     => $total, 
-            'count'     => $count, 
-            'exist'     => $exist,
-            'kFormat'   => $kFormat
+            'total'         => $total, 
+            'count'         => $count, 
+            'exist'         => $exist,
+            'kFormat'       => $kFormat,
+            'comments'      => $comments,
+            'commentCount'  => $commentCount
         ]);
     }
 
@@ -73,6 +77,7 @@ class HomeController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'name'      => 'required|max:225',
+            'city'      => 'required|max:225',
             'email'     => 'email|required|max:255|unique:comments',
             'comment'   => 'required'
         ]);
@@ -85,6 +90,7 @@ class HomeController extends Controller
         } else {
             $data = Comments::firstOrCreate([
                 'name'          => $request->input('name'),
+                'city'          => $request->input('city'),
                 'email'         => $request->input('email'),
                 'comment'       => $request->input('comment'),
                 'ip_address'    => $request->getClientIp()

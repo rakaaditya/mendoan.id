@@ -121,3 +121,15 @@ body {
 .thanks {
     font-size: 18px !important;
 }
+.comment-box-content {
+    margin-top: 10px;
+    border-top: dashed 1px #ebebeb;
+    background: #ccc;
+}
+.comment-child {
+    background: #fff;
+    padding: 10px;
+    color: #222;
+    margin-bottom: 20px;
+    border-bottom: dashed 1px #ebebeb;
+}

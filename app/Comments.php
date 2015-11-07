@@ -9,6 +9,6 @@ class Comments extends Model
 {
 	use SoftDeletes;
     protected $table 	= 'comments';
-    protected $fillable = ['id', 'ip_address', 'name', 'email', 'comment'];
+    protected $fillable = ['id', 'ip_address', 'name', 'city', 'email', 'comment'];
     protected $dates 	= ['deleted_at'];
 }
