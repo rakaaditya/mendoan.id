@@ -50,26 +50,17 @@ class HomeController extends Controller
 
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), []);
+        if(! $count = $this->redis->get(COUNTER_KEY))
+            $count = Votes::count();
 
-        if ($validator->fails()) {
-            $status = [
-                'status'    => 'failed',
-                'error'     => $validator->errors(),
-            ];
-        } else {
-            if(! $count = $this->redis->get(COUNTER_KEY))
-                $count = Votes::count();
-
-            $data = Votes::firstOrCreate([
-                'ip_address'  => $request->getClientIp()
-            ]);
-            if($data->save()) {
-                $count = (int)$count+1;
-                $this->redis->set(COUNTER_KEY, $count);
-            }
-            $total = str_pad($count, 6, 0, STR_PAD_LEFT);
-            echo $total;
+        $data = Votes::firstOrCreate([
+            'ip_address'  => $request->getClientIp()
+        ]);
+        if($data->save()) {
+            $count = (int)$count+1;
+            $this->redis->set(COUNTER_KEY, $count);
         }
+        $total = str_pad($count, 6, 0, STR_PAD_LEFT);
+        echo $total;
     }
 }
