@@ -16,8 +16,8 @@ class CommentController extends Controller
 		foreach($comments as $row)
 			$result[] = [
 				'id' 		=> (int)$row->id,
-				'name' 		=> $row->name,
-				'city'		=> $row->city,
+				'name' 		=> ucwords($row->name),
+				'city'		=> ucwords($row->city),
 				'comment' 	=> $row->comment,
 			];
 
