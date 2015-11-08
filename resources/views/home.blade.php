@@ -141,7 +141,7 @@
             </div> -->
             <div class="row">
                 <div class="col-md-12 col-xs-12 comment-box-content">
-                    <h4>Pendapat Masyarakat Tentang Privatisasi "Mendoan"</h4>
+                    <h4>{{$commentCount}} Pendapat Masyarakat Tentang Privatisasi "Mendoan"</h4>
                     <div  class="comment-child-box">
                         @foreach($comments as $row)
                             <div class="comment-child">
