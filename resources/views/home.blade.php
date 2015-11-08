@@ -46,7 +46,7 @@
         <div class="col-md-5 col-md-offset-3 container-box">
             <div class="row">
                 <div class="col-md-12" align="right">
-                    <a href="#" class="btn btn-xs btn-default">Tentang Website Ini</a>
+                    <a href="{{url('tentang')}}" class="btn btn-xs btn-default">Tentang Website Ini</a>
                 </div>
             </div>
             <div class="row">
