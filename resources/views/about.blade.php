@@ -17,7 +17,7 @@
                 	<p>Sampai pada hari kedua, Mas Uung "Request" ke saya untuk menambah kolom komentar untuk mengukur pendapat orang-orang. Ditambah dengan Mas Soep yang ikut berpendapat untuk ditambah kolom nama. Semakin besar nih aplikasi. Saya langsung buatkan malam itu juga. Dan baru beberapa jam dibuat, sebuah kolom di paling bawah tempat menampung komentar langsung penuh dengan komentar-komentar masyarakat. Mulai dari yang pro sampai yang kontra. Mulai dari yang berbahasa halus, sampai yang rasis. Saya sempat merasa bersalah membuat kolom komentar ini. Tapi ini pendapat masyarakat. Tidak ada fitur moderasi di komentar ini. Biarkan suara mereka mengalir di sebuat <i>timeline</i> kolom komentar ini.</p>
                 	<p>Sekali lagi, saya membuat aplikasi ini bukan untuk membuat suasana semakin panas. Sekarang aplikasi ini menjadi fasilitas masyarakat untuk menyampaikan pendapatnya tentang privatisasi "Mendoan".</p>
                 	<p><br/><br/><br/></p>
-                	<p align="right">Regards,<br/><br/><a href="http://www.rakaaditya.com/" target="_blank">Raka Aditya</a><br/>Developer</p>
+                	<p align="right">Warm Regards,<br/><br/><a href="http://www.rakaaditya.com/" target="_blank">Raka Aditya</a><br/>Developer</p>
                 </div>
             </div>
         </div>
