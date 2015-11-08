@@ -123,7 +123,6 @@ body {
 }
 .comment-box-content {
     margin-top: 10px;
-    border-top: dashed 1px #ebebeb;
     background: #F2F2F2;
 }
 .comment-child {
@@ -131,7 +130,6 @@ body {
     padding: 10px;
     color: #222;
     margin-bottom: 20px;
-    border-bottom: dashed 1px #ebebeb;
 }
 .copyright {
     padding: 10px;
