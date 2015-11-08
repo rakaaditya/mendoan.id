@@ -15,7 +15,9 @@ class HomeController extends Controller
     
     function __construct()
     {
-         $this->redis    = new \Predis\Client();
+        $this->redis    = new \Predis\Client([
+            'host' => env('REDIS_HOST', '127.0.0.1')
+        ]);
     }
 
     public function index(Request $request)
