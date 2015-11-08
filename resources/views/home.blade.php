@@ -135,6 +135,11 @@
                 @endif
             </div>
             <div class="row">
+                 <div class="col-md-12 col-xs-12 copyright">
+                    Aplikasi Ini Dibuat &amp; Dikembangkan oleh <a href="http://www.gedrix.com" target="_blank">gedrixCreative</a>.
+                 </div>
+            </div>
+            <div class="row">
                 <div class="col-md-12 col-xs-12 comment-box-content">
                     <h4>Pendapat Masyarakat Tentang Privatisasi "Mendoan"</h4>
                     <div  class="comment-child-box">

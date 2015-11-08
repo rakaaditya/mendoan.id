@@ -133,3 +133,7 @@ body {
     margin-bottom: 20px;
     border-bottom: dashed 1px #ebebeb;
 }
+.copyright {
+    padding: 10px;
+    text-align: center;
+}
