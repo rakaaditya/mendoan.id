@@ -36,6 +36,13 @@
                         </ul>
                 </div>
             </div>
+            <div class="row content">
+                <hr/>
+                <div class="col-md-12 about">
+                    <p><b>Update 9 November 16:00 WIB:</b></p>
+                    <p>Karena semakin banyaknya komentar-komentar yang mengandung rasialis dan kata-kata tidak sopan, dengan terpaksa teman-teman meminta untuk ditambahkan moderasi. Maka saat ini komentar yang tidak lolos moderasi tidak ditampilkan dan tetap kami simpan untuk arsip kami.</p>
+                </div>
+            </div>
         </div>
     </div>
 @endsection
