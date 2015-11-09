@@ -34,9 +34,8 @@ class HomeController extends Controller
         } else {
             $kFormat = $count;
         }
-
         $total          = str_pad($count, 6, 0, STR_PAD_LEFT);
-        $exist          = Votes::where('ip_address', $request->getClientIp())->count();
+        $exist          = $request->session()->get('voted');
         $comments       = Comments::orderBy('id', 'desc')->limit(5)->get();
         $commentCount   = Comments::count();
 
@@ -55,13 +54,17 @@ class HomeController extends Controller
         if(! $count = $this->redis->get(COUNTER_KEY))
             $count = Votes::count();
 
-        $data = Votes::firstOrCreate([
-            'ip_address'  => $request->getClientIp()
-        ]);
-        if($data->save()) {
+        $vote = new Votes;
+        $vote->ip_address = $request->getClientIp();
+
+        if($vote->save()) {
             $count = (int)$count+1;
             $this->redis->set(COUNTER_KEY, $count);
         }
+
+        // Set session
+        session(['voted' => true]);
+
         $total = str_pad($count, 6, 0, STR_PAD_LEFT);
         echo $total;
     }
