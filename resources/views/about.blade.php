@@ -9,7 +9,7 @@
                 </div>
             </div>
             <div class="row content">
-                <div class="col-md-8 col-xs-8 about">
+                <div class="col-md-8 col-xs-12 about">
                     <p>Aplikasi ini dibuat awalnya hanya untuk keisengan semata. Bukan serius membuat petisi untuk menggugat. Hal ini sebagai klarifikasi atas pemberitaan media yang berkembang sekarang. Dan sama sekali tidak ada maksud untuk membuat suasana semakin panas.</p>
                     <p>Beberapa hari yang lalu, ketika mulai ramai tentang masalah privatisasi "Mendoan", saya dan seorang senior saya, Mas <a href="http://soep.web.id/" target="_blank">Soep</a>, yang juga pegiat Gerakan Desa Membangun secara singkat mengeluarkan ide untuk membeli domain <a href="http://www.mendoan.id">mendoan.id</a>. Setelah domain di tangan kami, barulah terpikir mau diapakan domain ini. Akhirnya saya mencoba membuat sebuah aplikasi kecil yang sangat sederhana dengan sebuat tombol untuk menyatakan mendukung menolak privatisasi mendoan. Saya sampaikan ide saya ke Mas Soep dan aplikasi siap digunakan pada hari Jumat (6/11) lalu tepatnya sekitar pukul 18.00.</p>
                 	<p>Tidak disangka, dengan bantuan dari komunitas, akun twitter @iniPurwokerto, Mas <a href="https://twitter.com/sigitwid/" target="_blank">Sigit Widodo</a>, serta teman-teman lainnya yang begitu antusias menyebarkan website ini, dalam 2 jam sudah ada 800-an orang yang mendukung dengan mengeklik sebuah tombol kecil di yang saya buat hanya dalam hitungan menit sambil ngemil kuaci di kantor.</p>
@@ -19,7 +19,7 @@
                 	<p><br/><br/><br/></p>
                 	<p align="right">Warm Regards,<br/><br/><a href="http://www.rakaaditya.com/" target="_blank">Raka Aditya</a><br/>Developer</p>
                 </div>
-                <div class="col-md-4 col-xs-4 about">
+                <div class="col-md-4 col-xs-12 about">
                         <p><b>Mendoan.id dikelola (bukan dimiliki) bersama berkat kolaborasi dari:</b></p>
                         <b>Publikasi:</b>
                         <ul>
