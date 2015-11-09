@@ -29,7 +29,7 @@
                     <ul>
                         <li><a href="https://twitter.com/rakaadityaa/" target="_blank">Raka Aditya</a> (Web Developer)</li>
                         <li><a href="https://twitter.com/so3p/" target="_blank">Supriyanto</a> (Domain Registrant)</li>
-                        <li><a href="https://twitter.com/krez_paya" target="_blank">Kris Fajar</a> (Server Provider)</li>
+                        <li><a href="http://www.krisfajar.net" target="_blank">Kris Fajar</a> (Server Provider)</li>
                         <li><a href="https://twitter.com/uungferi/" target="_blank">Uung Feri</a> (Desain Logo)</li>
                         <li><a href="https://twitter.com/aryakulo/" target="_blank">Arya Rizki</a> (Desain Grafis)</li>
                     </ul>
