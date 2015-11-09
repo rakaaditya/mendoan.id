@@ -9,23 +9,23 @@ use DB;
 use Redis;
 class CommentController extends Controller
 {
-	public function index(Request $request)
-	{
-		$comments 	= Comments::orderBy('id', 'desc')->paginate(5);
-		$result 	= [];
-		foreach($comments as $row)
-			$result[] = [
-				'id' 		=> (int)$row->id,
-				'name' 		=> ucwords($row->name),
-				'city'		=> ucwords($row->city),
-				'comment' 	=> $row->comment,
-			];
+    public function index(Request $request)
+    {
+        $comments   = Comments::orderBy('id', 'desc')->paginate(5);
+        $result     = [];
+        foreach($comments as $row)
+            $result[] = [
+                'id'        => (int)$row->id,
+                'name'      => ucwords($row->name),
+                'city'      => ucwords($row->city),
+                'comment'   => $row->comment,
+            ];
 
-		return response()->json($result)
+        return response()->json($result)
                  ->setCallback($request->input('callback'));
-	}
+    }
 
-	public function store(Request $request)
+    public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'name'      => 'required|max:225',
@@ -57,6 +57,26 @@ class CommentController extends Controller
                  ->setCallback($request->input('callback'));
     }
 
+    public function search(Request $request)
+    {
+        $keyword    = strtolower($request->input('keyword'));
+        $comments   = Comments::whereRaw("LOWER(name) LIKE '%{$keyword}%'")
+                        ->orWhereRaw("LOWER(comment) LIKE '%{$keyword}%'")
+                        ->orderBy('id', 'desc')
+                        ->paginate(5);
+        $result     = [];
+        foreach($comments as $row)
+            $result[] = [
+                'id'        => (int)$row->id,
+                'name'      => ucwords($row->name),
+                'city'      => ucwords($row->city),
+                'comment'   => $row->comment,
+            ];
+
+        return response()->json($result)
+                 ->setCallback($request->input('callback'));
+    }
+
     public function delete(Request $request)
     {
         if(Comments::find($request->input('id'))->delete())
@@ -72,4 +92,21 @@ class CommentController extends Controller
 
         return $status;
     }
+
+    public function trash(Request $request)
+    {
+        $comments   = Comments::onlyTrashed()->orderBy('id', 'desc')->paginate(5);
+        $result     = [];
+        foreach($comments as $row)
+            $result[] = [
+                'id'        => (int)$row->id,
+                'name'      => ucwords($row->name),
+                'city'      => ucwords($row->city),
+                'comment'   => $row->comment,
+            ];
+
+        return response()->json($result)
+                 ->setCallback($request->input('callback'));
+    }
+
 }

@@ -15,7 +15,9 @@ $app->get('/', 'HomeController@index');
 $app->post('/', 'HomeController@store');
 $app->get('comment', 'CommentController@index');
 $app->post('comment', 'CommentController@store');
+$app->get('comment/search', 'CommentController@search');
 $app->get('comment/delete', 'CommentController@delete');
+$app->get('comment/trash', 'CommentController@trash');
 
 $app->get('tentang', function() use ($app) {
     return view('about');
