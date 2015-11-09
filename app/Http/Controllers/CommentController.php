@@ -56,4 +56,20 @@ class CommentController extends Controller
         return response()->json($status)
                  ->setCallback($request->input('callback'));
     }
+
+    public function delete(Request $request)
+    {
+        if(Comments::find($request->input('id'))->delete())
+            $status = [
+                'status'    => 'success',
+                'message'   => 'Comment deleted'
+            ];
+        else
+            $status = [
+                'status'    => 'failed',
+                'message'   => 'Comment not found or has been deleted'
+            ];
+
+        return $status;
+    }
 }
