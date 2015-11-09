@@ -60,8 +60,7 @@ class CommentController extends Controller
     public function search(Request $request)
     {
         $keyword    = strtolower($request->input('keyword'));
-        $comments   = Comments::whereRaw("LOWER(name) LIKE '%{$keyword}%'")
-                        ->orWhereRaw("LOWER(comment) LIKE '%{$keyword}%'")
+        $comments   = Comments::whereRaw("(LOWER(name) LIKE '%{$keyword}%' OR LOWER(comment) LIKE '%{$keyword}%') AND deleted_at IS NULL")
                         ->orderBy('id', 'desc')
                         ->paginate(5);
         $result     = [];
