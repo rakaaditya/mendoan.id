@@ -31,7 +31,7 @@
                         <li>Supriyanto (Domain Registrant)</li>
                         <li>Kris Fajar (Server Provider)</li>
                         <li>Uung Feri (Desain Logo)</li>
-                        <li>Uung Feri (Desain Grafis)</li>
+                        <li>Arya Rizki (Desain Grafis)</li>
                     </ul>
                 </div>
             </div>
