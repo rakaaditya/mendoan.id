@@ -22,16 +22,16 @@
                     <p><b>Mendoan.id dikelola (bukan dimiliki) bersama berkat kolaborasi dari:</b></p>
                     <b>Publikasi:</b>
                     <ul>
-                        <li>Sigit Widodo</li>
-                        <li>Agung</li>
+                        <li><a href="https://twitter.com/sigitwid/" target="_blank">Sigit Widodo</a></li>
+                        <li><a href="https://twitter.com/iniPurwokerto/" target="_blank">@iniPurwokerto</a></li>
                     </ul>
                     <b>Teknis:</b>
                     <ul>
-                        <li>Raka Aditya (Web Developer)</li>
-                        <li>Supriyanto (Domain Registrant)</li>
-                        <li>Kris Fajar (Server Provider)</li>
-                        <li>Uung Feri (Desain Logo)</li>
-                        <li>Arya Rizki (Desain Grafis)</li>
+                        <li><a href="https://twitter.com/rakaadityaa/" target="_blank">Raka Aditya</a> (Web Developer)</li>
+                        <li><a href="https://twitter.com/so3p/" target="_blank">Supriyanto</a> (Domain Registrant)</li>
+                        <li><a href="https://twitter.com/krez_paya" target="_blank">Kris Fajar</a> (Server Provider)</li>
+                        <li><a href="https://twitter.com/uungferi/" target="_blank">Uung Feri</a> (Desain Logo)</li>
+                        <li><a href="https://twitter.com/aryakulo/" target="_blank">Arya Rizki</a> (Desain Grafis)</li>
                     </ul>
                 </div>
             </div>
