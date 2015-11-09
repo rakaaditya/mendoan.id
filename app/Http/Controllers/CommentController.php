@@ -93,6 +93,22 @@ class CommentController extends Controller
         return $status;
     }
 
+    public function restore(Request $request)
+    {
+        if(Comments::withTrashed()->where('id', $request->input('id'))->restore())
+            $status = [
+                'status'    => 'success',
+                'message'   => 'Comment restored'
+            ];
+        else
+            $status = [
+                'status'    => 'failed',
+                'message'   => 'Comment not found or has been restored'
+            ];
+
+        return $status;
+    }
+
     public function trash(Request $request)
     {
         $comments   = Comments::onlyTrashed()->orderBy('id', 'desc')->paginate(5);

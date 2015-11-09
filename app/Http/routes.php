@@ -17,6 +17,7 @@ $app->get('comment', 'CommentController@index');
 $app->post('comment', 'CommentController@store');
 $app->get('comment/search', 'CommentController@search');
 $app->get('comment/delete', 'CommentController@delete');
+$app->get('comment/restore', 'CommentController@restore');
 $app->get('comment/trash', 'CommentController@trash');
 
 $app->get('tentang', function() use ($app) {
