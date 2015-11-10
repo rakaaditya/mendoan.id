@@ -81,7 +81,7 @@
                 </div>
                 <div class="col-md-12 col-xs-12 desc" style="border:solid 2px #ebebeb;">
                     <h1>Update 10 November 2015</h1>
-                    <p style="font-size:14px;"> Polemik terkait hak eksklusif mendoan yang dilakukan Fudji Wong, akhirnya berakhir dengan diserahkannya mendoan kepada Pemkab Banyumas. <b>Berita selengkapnya di <a href="http://www.radarbanyumas.co.id/fudji-wong-lepas-hak-eksklusif-mendoan-2/">sini</a></b></p>
+                    <p style="font-size:14px;">Polemik terkait hak eksklusif mendoan yang dilakukan Fudji Wong, akhirnya berakhir dengan diserahkannya mendoan kepada Pemkab Banyumas. <b>Berita selengkapnya di <a href="http://www.radarbanyumas.co.id/fudji-wong-lepas-hak-eksklusif-mendoan-2/">sini</a></b></p>
                     <hr>
                     <p style="font-size:14px;">Dengan penuh rasa hormat, kami ucapkan terima kasih kepada saudara Fudji Wong dan Pemerintah Kabupaten Banyumas yang telah mencapai kesepakatan untuk mengembalikan "Mendoan" kepada masyarakat.</p>
                     <p style="font-size:14px;">Juga tidak lupa kami ucapkan terima kasih kepada seluruh masyarakat yang telah mendukung penuh agar dikembalikannya "Mendoan" kepada kita semua.</p>
