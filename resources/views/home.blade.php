@@ -44,11 +44,11 @@
     </div>
     <div class="row">
         <div class="col-md-5 col-md-offset-3 container-box">
-           <!--  <div class="row">
+            <div class="row">
                 <div class="col-md-12" align="right">
                     <a href="{{url('tentang')}}" class="btn btn-xs btn-default">Tentang Website Ini</a>
                 </div>
-            </div> -->
+            </div>
             <div class="row">
                 <div class="col-md-12 title-box">
                     <img src="{{url('assets/img/logo.png')}}" width="100%">
@@ -73,71 +73,23 @@
                         <p style="text-align:right;"><b>Ada Apa?</b><br/>Fudji Wong mengantongi merek 'mendoan' dengan nomor IDM000237714 yang terdaftar pada 23 Februari 2010 dan berlaku hingga 15 Mei 2018 atas nama Fudji Wong.</p>
                     </div>
                 </div>
-                <div class="col-md-12 col-xs-12 desc">
-                    <p style="font-size:18px;">Mendoan milik kita semua. Bukan milik perseorangan. Sudah seharusnya Kemenkum HAM mengkaji ulang pemberian sertifikat merek "Mendoan" untuk Fudji Wong. Luangkan waktumu untuk bergabung dengan {{$count}} orang lainnya mendukung petisi ini dengan cara klik tombol di bawah.</p>
-                </div>
-                @if(! $exist)
                 <div class="col-md-12 col-xs-12 count-box">
-                    <span class="counter-text-info">Sejak Jumat (6/11) pukul 18:00 WIB hingga sekarang,</span><br/>
+                    <span class="counter-text-info">Sejak Jumat (6/11) pukul 18:00 WIB hingga Selasa (10/11),</span><br/>
                     <span class="counter" id="counter">{{$total}}</span><br/>
-                    <span class="counter-text" id="counter-text">Orang telah mendukung</span>
+                    <span class="counter-text" id="counter-text">Orang telah mendukung</span><br/>
+                    <span class="counter-text" id="counter-text">Dan @{{$commentCount}} orang telah menyampaikan pendapatnya</span>
                 </div>
-                <div class="col-md-12 col-xs-12 support-box">
-                    <form method="post" id="support">
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <button type="submit" class="btn btn-primary" id="support-button">DUKUNG SEKARANG!</button>
-                    </form>
-                    Atau
+                <div class="col-md-12 col-xs-12 desc" style="border:solid 2px #ebebeb;">
+                    <h1>Update 10 November 2015</h1>
+                    <p style="font-size:14px;"> Polemik terkait hak eksklusif mendoan yang dilakukan Fudji Wong, akhirnya berakhir dengan diserahkannya mendoan kepada Pemkab Banyumas. <b>Berita selengkapnya di <a href="http://www.radarbanyumas.co.id/fudji-wong-lepas-hak-eksklusif-mendoan-2/">sini</a></b></p>
+                    <hr>
+                    <p style="font-size:14px;">Dengan penuh rasa hormat, kami ucapkan terima kasih kepada saudara Fudji Wong dan Pemerintah Kabupaten Banyumas yang telah mencapai kesepakatan untuk mengembalikan "Mendoan" kepada masyarakat.</p>
+                    <p style="font-size:14px;">Juga tidak lupa kami ucapkan terima kasih kepada seluruh masyarakat yang telah mendukung penuh agar dikembalikannya "Mendoan" kepada kita semua.</p>
+                    <p style="font-size:14px;">Seluruh dukungan dan pendapat masyarakat yang telah kami terima di website ini akan kami sampaikan kepada Pemerintah Kabupaten Banyumas sebagai bentuk aspirasi masyarakat terhadap masalah ini dan agar masalah seperti ini tidak terulang kembali.</p>
+                    <p style="font-size:14px;">Kami juga memohon maaf yang sebesar-besarnya apabila ada pihak yang kurang berkenan atau merasa dirugikan dengan adanya website ini.</p>
+                    <br/>
+                    <p style="font-size:14px;" align="right">Salam,<br/><br/><b>Seluruh Tim yang Tergabung Mengelola Website Ini</b></p>
                 </div>
-                <div class="col-md-12 col-xs-12" align="center">
-                    <button type="submit" class="btn btn-default" id="comment-button" data-toggle="modal" data-target="#comment-modal">Berikan Komentar</button>
-                </div>
-                <div class="col-md-12 col-xs-12 share-box" style="display: none;">
-                    <hr/>
-                    <p class="thanks">Terima kasih telah meluangkan waktunya.<br/>Sebarkan agar teman-teman kamu ikut mendukung:</p>
-                    <div class="sharepost">
-                        <ul>
-                            <li class="facebook">
-                                <div class="icon"><a href="http://www.facebook.com/sharer/sharer.php?u={{url()}}" id="fbShare"><i class="fa fa-facebook"></i></a></div>
-                            </li>
-                            <li class="twitter">
-                                <div class="icon"><a href="https://twitter.com/share?text={{urlencode('Mendoan milik kita semua. Bukan milik perseorangan. Gabung dukung petisi ini!  #SaveMendoan')}} &url={{urlencode(url())}}" id="twShare"><i class="fa fa-twitter"></i></a></div>
-                            </li>
-                            <li class="whatsapp">
-                                <div class="icon"><a href="whatsapp://send?text={{urlencode('Mendoan milik kita semua. Bukan milik perseorangan. Gabung dukung petisi ini! '.url().' #SaveMendoan')}}"><i class="fa fa-whatsapp"></i></a></div>
-                            </li>
-                        </ul>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-                @else
-                <div class="col-md-12 col-xs-12 count-box">
-                    <span class="counter-text-info">Sejak Jumat (6/11) pukul 18:00 WIB hingga sekarang,</span><br/>
-                    <span class="counter" id="counter">{{$total}}</span><br/>
-                    <span class="counter-text" id="counter-text">Orang telah mendukung termasuk kamu</span>
-                </div>
-                <div class="col-md-12 col-xs-12" align="center">
-                    <button type="submit" class="btn btn-default" id="comment-button" data-toggle="modal" data-target="#comment-modal">Berikan Komentar</button>
-                </div>
-                <div class="col-md-12 col-xs-12 share-box">
-                    <hr/>
-                    <p class="thanks">Terima kasih telah meluangkan waktunya.<br/>Sebarkan agar teman-teman kamu ikut mendukung:</p>
-                    <div class="sharepost">
-                        <ul>
-                            <li class="facebook">
-                                <div class="icon"><a href="http://www.facebook.com/sharer/sharer.php?u={{url()}}" id="fbShare"><i class="fa fa-facebook"></i></a></div>
-                            </li>
-                            <li class="twitter">
-                                <div class="icon"><a href="https://twitter.com/share?text={{urlencode('Mendoan milik kita semua. Bukan milik perseorangan. Gabung dukung petisi ini!  #SaveMendoan')}} &url={{urlencode(url())}}" id="twShare"><i class="fa fa-twitter"></i></a></div>
-                            </li>
-                            <li class="whatsapp">
-                                <div class="icon"><a href="whatsapp://send?text={{urlencode('Mendoan milik kita semua. Bukan milik perseorangan. Gabung dukung petisi ini! '.url().' #SaveMendoan')}}"><i class="fa fa-whatsapp"></i></a></div>
-                            </li>
-                        </ul>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-                @endif
             </div>
            <!--  <div class="row">
                  <div class="col-md-12 col-xs-12 copyright">
