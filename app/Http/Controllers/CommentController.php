@@ -25,6 +25,26 @@ class CommentController extends Controller
                  ->setCallback($request->input('callback'));
     }
 
+    public function listComment(Request $request)
+    {
+        $comments   = Comments::orderBy('id', 'desc')->paginate(10);
+
+        return view('comments/index', [
+            'comment'   => $comments,
+            'type'      => 'list'
+        ]);
+    }
+
+    public function listTrash(Request $request)
+    {
+        $comments   = Comments::onlyTrashed()->orderBy('id', 'desc')->paginate(10);
+
+        return view('comments/index', [
+            'comment'   => $comments,
+            'type'      => 'trash'
+        ]);
+    }
+
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -89,7 +109,10 @@ class CommentController extends Controller
                 'message'   => 'Comment not found or has been deleted'
             ];
 
-        return $status;
+        if($request->input('src') == 'cms')
+            return redirect($_SERVER['HTTP_REFERER'])->with('message', 'Komentar telah dimusnahkan');
+        else
+            return $status;
     }
 
     public function restore(Request $request)
@@ -105,7 +128,10 @@ class CommentController extends Controller
                 'message'   => 'Comment not found or has been restored'
             ];
 
-        return $status;
+        if($request->input('src') == 'cms')
+            return redirect($_SERVER['HTTP_REFERER'])->with('message', 'Komentar telah dibalikin');
+        else
+            return $status;
     }
 
     public function trash(Request $request)

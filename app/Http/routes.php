@@ -20,6 +20,9 @@ $app->get('comment/delete', 'CommentController@delete');
 $app->get('comment/restore', 'CommentController@restore');
 $app->get('comment/trash', 'CommentController@trash');
 
+$app->get('min/komen', 'CommentController@listComment');
+$app->get('min/sampah', 'CommentController@listTrash');
+
 $app->get('tentang', function() use ($app) {
     return view('about');
 });
