@@ -55,7 +55,7 @@
                 </div>
             </div>
             <div class="row content">
-                <div class="col-md-12 col-xs-12 index-1">
+<!--                 <div class="col-md-12 col-xs-12 index-1">
                     <div class="col-md-6 col-xs-6">
                         <p><b>Apa Itu Mendoan?</b><br/>Kata mendoan dianggap berasal dari bahasa Banyumasan, mendo yang berarti setengah matang atau lembek. Mendoan berarti memasak dengan minyak panas yang banyak dengan cepat sehingga masakan tidak matang benar. (Wikipedia)</p>
                     </div>
@@ -72,7 +72,7 @@
                     <div class="col-md-6 col-xs-6">
                         <p style="text-align:right;"><b>Ada Apa?</b><br/>Fudji Wong mengantongi merek 'mendoan' dengan nomor IDM000237714 yang terdaftar pada 23 Februari 2010 dan berlaku hingga 15 Mei 2018 atas nama Fudji Wong.</p>
                     </div>
-                </div>
+                </div> -->
                 <div class="col-md-12 col-xs-12 count-box">
                     <span class="counter-text-info">Sejak Jumat (6/11) pukul 18:00 WIB hingga Selasa (10/11),</span><br/>
                     <span class="counter" id="counter">{{$total}}</span><br/>
@@ -96,7 +96,7 @@
                     Aplikasi Ini Dibuat &amp; Dikembangkan oleh <a href="http://www.gedrix.com" target="_blank">gedrixCreative</a>.
                  </div>
             </div> -->
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-md-12 col-xs-12 comment-box-content">
                     <h4>{{$commentCount}} Pendapat Masyarakat Tentang Privatisasi "Mendoan"</h4>
                     <div  class="comment-child-box">
@@ -110,7 +110,7 @@
                         <span class="bg-primary" style="padding:10px;">Memuat Komentar Sebelumnya...</span>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div id="triggerLoadMore"></div>
         </div>
     </div>
