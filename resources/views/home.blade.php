@@ -74,7 +74,7 @@
                     </div>
                 </div> -->
                 <div class="col-md-12 col-xs-12 count-box">
-                    <span class="counter-text-info">Sejak Jumat (6/11) pukul 18:00 WIB hingga Selasa (10/11),</span><br/>
+                    <span class="counter-text-info">Sejak Jumat (6/11) pukul 18:00 WIB hingga Selasa (10/11) pukul 16:45,</span><br/>
                     <span class="counter" id="counter">{{$total}}</span><br/>
                     <span class="counter-text" id="counter-text">Orang telah mendukung</span><br/>
                     <span class="counter-text" id="counter-text">Dan @{{$commentCount}} orang telah menyampaikan pendapatnya</span>
