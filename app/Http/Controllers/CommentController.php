@@ -7,6 +7,7 @@ use App\Votes;
 use App\Comments;
 use DB;
 use Redis;
+
 class CommentController extends Controller
 {
     public function index(Request $request)
