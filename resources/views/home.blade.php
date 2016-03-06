@@ -91,7 +91,7 @@
                     Aplikasi Ini Dibuat &amp; Dikembangkan oleh <a href="http://www.gedrix.com" target="_blank">gedrixCreative</a>.
                  </div>
             </div> -->
-            <!-- <div class="row">
+            <div class="row">
                 <div class="col-md-12 col-xs-12 comment-box-content">
                     <h4>{{$commentCount}} Pendapat Masyarakat Tentang Privatisasi "Mendoan"</h4>
                     <div  class="comment-child-box">
@@ -105,7 +105,7 @@
                         <span class="bg-primary" style="padding:10px;">Memuat Komentar Sebelumnya...</span>
                     </div>
                 </div>
-            </div> -->
+            </div>
             <div id="triggerLoadMore"></div>
         </div>
     </div>
