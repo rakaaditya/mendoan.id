@@ -12,7 +12,7 @@ class CommentController extends Controller
 {
     public function index(Request $request)
     {
-        $comments   = Comments::orderBy('id', 'desc')->paginate(5);
+        $comments   = Comments::orderBy('id', 'desc')->paginate(10);
         $result     = [];
         foreach($comments as $row)
             $result[] = [
@@ -28,7 +28,7 @@ class CommentController extends Controller
 
     public function listComment(Request $request)
     {
-        $comments   = Comments::orderBy('id', 'desc')->paginate(10);
+        $comments   = Comments::orderBy('id', 'desc')->get();
 
         return view('comments/index', [
             'comment'   => $comments,

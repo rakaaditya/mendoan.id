@@ -164,11 +164,13 @@ $(document).ready(function() {
 
     // Load more comments
     var counter = 2;
+    var loadProccess = 0;
     $(function() {
         $(window).scroll(function(){
             var distanceTop = $('#triggerLoadMore').offset().top - $(window).height();
 
-            if ($(window).scrollTop() > distanceTop) {
+            if ($(window).scrollTop() > distanceTop && loadProccess == 0) {
+                loadProccess = 1;
                 console.log('Load More!');
                 $('#loadMoreText').show();
                 url = "{{url('comment?page=')}}"+counter;
@@ -189,6 +191,7 @@ $(document).ready(function() {
                     $('#loadMoreText').hide();
                 });
                 counter++;
+                loadProccess = 0;
             }
         });
     });

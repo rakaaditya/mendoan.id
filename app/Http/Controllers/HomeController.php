@@ -36,7 +36,7 @@ class HomeController extends Controller
         }
         $total          = str_pad($count, 6, 0, STR_PAD_LEFT);
         $exist          = $request->session()->get('voted');
-        $comments       = Comments::orderBy('id', 'desc')->limit(5)->get();
+        $comments       = Comments::orderBy('id', 'desc')->limit(10)->get();
         $commentCount   = Comments::count();
 
         return view('home', [
